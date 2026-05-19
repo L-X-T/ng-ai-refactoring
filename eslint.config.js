@@ -6,7 +6,7 @@ const eslintConfigPrettier = require('eslint-config-prettier');
 
 module.exports = tseslint.config(
   {
-    ignores: ['.angular/**', '.nx/**', 'coverage/**', 'dist/**'],
+    ignores: ['.angular/**', 'coverage/**', 'dist/**'],
     files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
@@ -35,7 +35,7 @@ module.exports = tseslint.config(
       ],
       // Angular best practices
       '@angular-eslint/no-empty-lifecycle-method': 'warn',
-      '@angular-eslint/prefer-on-push-component-change-detection': 'off', // should be turned on, off for learning!
+      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
       '@angular-eslint/prefer-output-readonly': 'warn',
       '@angular-eslint/prefer-signals': 'warn',
       '@angular-eslint/prefer-standalone': 'warn',
@@ -79,7 +79,7 @@ module.exports = tseslint.config(
       ],
       'max-lines': ['error', 400],
       'no-bitwise': 'error',
-      'no-console': 'off', // should be turned on, off for debugging!
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-new-wrappers': 'error',
       'no-useless-concat': 'error',
       'no-var': 'error',

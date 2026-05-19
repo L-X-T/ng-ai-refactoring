@@ -23,6 +23,7 @@ node_modules
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mcp.json
 
 # misc
 /.sass-cache
@@ -40,6 +41,7 @@ Thumbs.db
 
 # Angular
 .angular
-.nx/cache
-.nx/workspace-data
-.nx/polygraph
+
+# Claude
+.claude/worktrees
+.claude/settings.local.json

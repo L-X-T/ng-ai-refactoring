@@ -26,7 +26,7 @@ Findest Du auf [LXT.dev](https://lxt.dev), genauer gesagt hier: https://lxt.dev/
 ## Voraussetzungen
 
 - Stelle sicher, dass deine IDE (WebStorm mit Junie, VS Code mit Claude Code, Cursor oder Windsurf) mit deinem AI Agent eingerichtet ist.
-- Vergewissere dich, dass Prettier, ESLint und deine AI-Anweisungen (`AI.md`, `mcp.json`, `.aiignore`) korrekt konfiguriert sind.
+- Vergewissere dich, dass Prettier, ESLint und deine AI-Anweisungen (`AGENTS.md`, `.mcp.json`, `.aiignore`) korrekt konfiguriert sind.
 
 ## Empfehlung zum konkreten Fallbeispiel
 
@@ -72,7 +72,8 @@ _Pro Tip:_ Hier die KI arbeiten lassen. Nach jedem Schritt solltest du einen Git
 
 - **Angular & Core-Pakete aktualisieren:** Führe `nx migrate latest` aus, um Nx und Angular auf die neueste Version zu migrieren. Folge den Anweisungen der Angular CLI, um eventuelle automatische Migrationen anzuwenden.
 - **Weitere Abhängigkeiten aktualisieren:** Aktualisiere alle Angular-Pakete manuell, um wirklich die neueste Version zu bekommen.
-- **Angular MCP einrichten:** Füge den Angular Language Service MCP-Server zu deiner AI-Konfiguration (`mcp.json`) hinzu, damit dein AI Agent direkten Zugriff auf Angular-spezifisches Wissen und Compiler-Informationen erhält.
+- **AI-Konfiguration prüfen:** Stelle sicher, dass `AGENTS.md`, `.mcp.json` und `.aiignore` aktuell sind. Für dieses Nx-Workspace ist der Nx MCP die Quelle für Workspace- und Projektinformationen; der Angular MCP liefert Angular-spezifische Best Practices und Compiler-Kontext.
+- **Nx Cloud optional einrichten:** Wenn du `/monitor-ci` oder Self-Healing-Fixes verwenden möchtest, verbinde das Workspace zuerst mit Nx Cloud, sodass `nx.json` ein `nxCloudId` oder `nxCloudAccessToken` enthält.
 - **Kompilierung prüfen:** Stelle sicher, dass das Projekt nach dem Update weiterhin fehlerfrei baut (`nx serve` und `nx build`) und keine Breaking Changes übersehen wurden.
 
 _Pro Tip:_ Mach das Update lieber selbst, ohne KI.

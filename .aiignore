@@ -1,30 +1,68 @@
-# Dependencies
-node_modules/
+# Secrets, credentials, and environment files — keep these out of AI context.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+secrets/
+credentials/
+.credentials
+.netrc
+auth.json
+service-account*.json
 
-# Lock files
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
+# Angular environment files often contain API keys / endpoints
+**/src/environments/environment*.ts
+!**/src/environments/environment.ts.example
 
-# Build output
-build/
-coverage/
-dist/
-out-tsc/
-tmp/
+# compiled output
+dist
+tmp
+/out-tsc
 
-# Angular / Nx cache
-.angular/
+# dependencies
+node_modules
 
-# IDE / Editor files
-.idea/
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# Env
-*.env
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Logs
-*.log
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-# OS files
+# System Files
 .DS_Store
 Thumbs.db
+
+# Angular & NX
+.angular
+.nx/cache
+.nx/workspace-data
+.nx/polygraph
+
+# Claude
+.claude/worktrees
+.claude/settings.local.json
